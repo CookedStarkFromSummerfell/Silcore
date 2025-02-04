@@ -98,7 +98,7 @@ public class PrivacyProperties {
         SHARED("shared", 2);
 
         public static final Codec<PrivacyProperties.Type> CODEC = SerializableEnum.codec(Type.class);
-        public static final StreamCodec<ByteBuf, PrivacyProperties.Type> STREAM_CODEC = SerializableEnum.streamCodec(Type.class, Type::id);
+        public static final StreamCodec<ByteBuf, PrivacyProperties.Type> STREAM_CODEC = SerializableEnum.streamCodec(Type.class);
         private final String name;
         private final int id;
 

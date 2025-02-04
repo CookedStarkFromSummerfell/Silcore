@@ -21,12 +21,12 @@ public interface SerializableEnum extends StringRepresentable {
         return StringRepresentable.fromValues(clazz::getEnumConstants);
     }
 
-    static <E extends SerializableEnum> StreamCodec<ByteBuf, E> streamCodec(Class<E> clazz, ToIntFunction<E> func) {
+    static <E extends SerializableEnum> StreamCodec<ByteBuf, E> streamCodec(Class<E> clazz) {
         if (!clazz.isEnum()) {
             throw new IllegalArgumentException("Not an enum: " + clazz);
         }
 
-        IntFunction<E> byId = ByIdMap.continuous(func, clazz.getEnumConstants(), ByIdMap.OutOfBoundsStrategy.ZERO);
-        return ByteBufCodecs.idMapper(byId, func);
+        IntFunction<E> byId = ByIdMap.continuous(E::id, clazz.getEnumConstants(), ByIdMap.OutOfBoundsStrategy.ZERO);
+        return ByteBufCodecs.idMapper(byId, E::id);
     }
 }

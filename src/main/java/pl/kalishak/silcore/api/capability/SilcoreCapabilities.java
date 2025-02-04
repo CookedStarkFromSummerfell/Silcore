@@ -9,6 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import pl.kalishak.silcore.SilcoreMod;
 import pl.kalishak.silcore.api.world.material.gas.IGasTank;
 
+@SuppressWarnings("unused")
 public class SilcoreCapabilities {
     private SilcoreCapabilities() {}
 

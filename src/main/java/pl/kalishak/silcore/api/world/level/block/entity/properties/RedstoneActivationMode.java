@@ -12,7 +12,7 @@ public enum RedstoneActivationMode implements SerializableEnum {
     SIGNAL_OFF("signal_off", false, 3);
 
     public static final Codec<RedstoneActivationMode> CODEC = SerializableEnum.codec(RedstoneActivationMode.class);
-    public static final StreamCodec<ByteBuf, RedstoneActivationMode> STREAM_CODEC = SerializableEnum.streamCodec(RedstoneActivationMode.class, RedstoneActivationMode::id);
+    public static final StreamCodec<ByteBuf, RedstoneActivationMode> STREAM_CODEC = SerializableEnum.streamCodec(RedstoneActivationMode.class);
     private final String name;
     private final boolean signal;
     private final int id;

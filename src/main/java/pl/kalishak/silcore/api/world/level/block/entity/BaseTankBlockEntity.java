@@ -11,8 +11,6 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
 import pl.kalishak.silcore.api.client.model.data.SilcoreModelProperties;
-import pl.kalishak.silcore.api.world.inventory.HandlerUtils;
-import pl.kalishak.silcore.api.world.item.component.FluidHandlerComponent;
 import pl.kalishak.silcore.api.world.item.component.SilcoreApiDataComponents;
 
 public abstract class BaseTankBlockEntity extends FunctionalBlockEntity {

@@ -3,7 +3,6 @@ package pl.kalishak.silcore;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import pl.kalishak.silcore.api.SilcoreApi;
 import pl.kalishak.silcore.api.registry.internal.SilcoreRegistries;
 import pl.kalishak.silcore.api.world.material.gas.SilcoreGases;
 import pl.kalishak.silcore.api.world.material.gas.crafting.display.SilcoreSlotDisplays;
